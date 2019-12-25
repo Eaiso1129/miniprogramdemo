@@ -20,3 +20,9 @@
 <view>当前计数： {{counter}}</view>
 <button size='mini' bindtap='handleBtnAdd'> + </button>
 <button size='mini' bindtap='handleBtnSub'> - </button>
+
+<!-- 获取用户信息1 -->
+<button size='mini' open-type='getUserInfo' bindgetuserinfo='handleGetUserInfo'>获取用户信息</button>
+
+<!-- 获取用户信息2 仅仅作为展示 -->
+<open-data type='userNickName'></open-data>

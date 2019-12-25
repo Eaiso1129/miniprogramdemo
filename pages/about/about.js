@@ -1,4 +1,11 @@
 // pages/about/about.js
+
+// 获取App的实例对象
+const app = getApp()
+console.log(app.globalData.author)
+console.log(app.globalData.userInfo)
+
+// Page() -> 注册页面
 Page({
 
   /**
@@ -43,6 +50,10 @@ Page({
       counter: this.data.counter - 1
     }),
     console.log('counter : ' + this.data.counter)
+  },
+
+  handleGetUserInfo(event){
+    console.log(event)
   },
 
   /**
