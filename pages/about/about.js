@@ -5,7 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
+    title:'this is a title',
+    name:'eaiso',
+    age: 20,
+    student: [
+      { id: 100, name: 'james', age: 27 },
+      { id: 101, name: 'kobe', age: 28 },
+      { id: 102, name: 'harden', age: 25 },
+      { id: 103, name: 'curry', age: 25 }
+    ],
+    counter: 0
+  },
 
+  /**
+   * 按钮监听 点击时 counter + 1
+   */
+  handleBtnAdd(){
+    console.log("点击+按钮"),
+    
+    // 1. 错误做法，界面不会刷新
+    // this.data.counter += 1,
+    
+    // 2. this.setData()
+    this.setData({
+      counter: this.data.counter + 1
+    }),
+
+    console.log('counter : ' + this.data.counter)
+  },
+
+  /**
+   * 按钮监听 点击时 counter - 1
+   */
+  handleBtnSub() {
+    console.log("点击-按钮"),
+    this.setData({
+      counter: this.data.counter - 1
+    }),
+    console.log('counter : ' + this.data.counter)
   },
 
   /**
