@@ -1,0 +1,27 @@
+/* pages/3View/3View.wxss */
+.box{
+  background: red;
+}
+.pressed{
+  width: 100px;
+  height: 100px;
+  background: orange;
+  font-size: 20px;
+}
+.box2{
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+.box2-hover{
+  background: green;
+}
+.box3{
+  width: 100px;
+  height: 100px;
+  background: purple;
+}
+.box3-hover{
+  background: yellow;
+}

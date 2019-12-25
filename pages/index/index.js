@@ -21,6 +21,12 @@ Page({
       url: '../2TextAndButton/2TextAndButton'
     })
   },  
+  bindViewTap3: function () {
+    console.log('标语被点击'),
+      wx.navigateTo({
+      url: '../3View/3View'
+      })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
