@@ -1,0 +1,25 @@
+<!--pages/4Image/4Image.wxml-->
+
+<!-- 
+1.image的基本使用
+重点：
+  1. image组件可以写成单标签，也可写成双标签
+  2. image组件有默认的大小：320*240
+  3. image组件是一个行内块级元素
+-->
+<!-- 2.src 图片路径 ：本地路径/远程路径） -->
+<image src='/pictures/icon/1.jpg'/>
+<image src='/pictures/icon/1.jpg'></image>
+<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577289647985&di=065e8299747b2d36e676611f949cb8a0&imgtype=0&src=http%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1704%2F775-1F40Q22G3-50.jpg'></image>
+
+<!-- 补充： 显示相册中的图片 -->
+<button bindtap='handleChoseAlbum' type='primary'>选择图片</button>
+<image src='{{imgUrl}}'></image>
+
+<!-- 3.bindload 监听图片加载完成 -->
+<!-- lazy-load 图片懒加载 -->
+<view>-------------------------------------------</view>
+<image wx:for="{{10}}" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577289647985&di=065e8299747b2d36e676611f949cb8a0&imgtype=0&src=http%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1704%2F775-1F40Q22G3-50.jpg' bindload='handleImageLoad' lazy-load='true'></image>
+
+<!-- 4.show-menu-by-longpress 长按图片出现识别小程序码 -->
+<image src='/pictures/icon/1.jpg' show-menu-by-longpress='true'></image>

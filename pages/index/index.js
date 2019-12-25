@@ -27,6 +27,12 @@ Page({
       url: '../3View/3View'
       })
   },
+  bindViewTap4: function () {
+    console.log('标语被点击'),
+      wx.navigateTo({
+      url: '../4Image/4Image'
+      })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
