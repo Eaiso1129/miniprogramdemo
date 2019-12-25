@@ -15,9 +15,10 @@ Page({
       url: '../logs/logs'
     })
   },
-  bindViewTap2: function(){
+  bindViewTap2: function() {
+    console.log('标语被点击'),
     wx.navigateTo({
-      url: '../about/about',
+      url: '../about/about'
     })
   },  
   onLoad: function () {

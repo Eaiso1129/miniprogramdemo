@@ -5,9 +5,27 @@
     "pages/about/about"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff777",
     "navigationBarTitleText": "Test",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "orange",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/about/about",
+        "text": "about",
+        "iconPath": "pictures/icon/timg.jpg",
+        "selectedIconPath": "pictures/icon/1.jpg"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "pictures/icon/timg.jpg",
+        "selectedIconPath": "pictures/icon/1.jpg"
+      }
+    ]
   }
 }
