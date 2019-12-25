@@ -1,0 +1,47 @@
+<!--pages/2innercomponent/2innercomponent.wxml-->
+
+<!-- <text> text 组件用于显示文本，类似span标签，是行内元素（行内元素，多个text标签会同占一行） --> 
+<!-- 1.基本使用 -->
+<text>hello world</text>
+<text>北京欢迎你\n</text>
+
+<!-- 2.selectable -->
+<!-- 默认情况下text中文本长按不能选中 -->
+<text selectable='true'>这行可以被选中\n</text>
+
+<!-- 3.space: 决定文本空格大小 -->
+<!-- emsp:中文字符空格大小 ensp:英文字符空格大小 nbsp:根据字体设置的空格大小 -->
+<text space='nbsp'>hello world\n</text>
+<text space='ensp'>hello world\n</text>
+<text space='emsp'>hello world\n</text>
+
+<!-- 4.decode: 是否解码文本 -->
+<text>without decode: 5 &gt; 3 \n</text>
+<text decode='true'>within decode: 5 &gt; 3 \n</text>
+
+<!-- <button>组件： 用于创建按钮，默认块级元素 -->
+<!-- 1.基本使用 -->
+<button>按钮</button>
+
+<!-- 2.size属性 -->
+<button size='mini'>mini 按钮</button>
+<button size='mini'>mini 按钮</button>
+
+<!-- 3.type -->
+<button type='primary'>按钮</button>
+<button type='default'>按钮</button>
+<button type='warn'>按钮</button>
+
+<!-- 4.plain : 镂空效果-->
+<button type='primary' plain='true'>按钮</button>
+
+<!-- 5.disable : 是否可用-->
+<button type='primary' disabled='true'>按钮</button>
+
+<!-- 6.loading -->
+<button type='primary' loading='true'>按钮</button>
+<button type='primary' loading='{{isLoading}}' bindtap='handleBtnLoading'>点我就loading</button>
+<button type='primary' bindtap='handleBtnLoading2'>点我结束loading</button>
+
+<!-- 7.hover-class : 制定点击按钮时，按钮的显示方式 -->
+<button hover-class='pressed'>按钮</button>

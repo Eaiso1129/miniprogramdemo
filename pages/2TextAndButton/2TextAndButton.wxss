@@ -1,0 +1,5 @@
+/* pages/2innercomponent/2innercomponent.wxss */
+.pressed{
+  background: red;
+  color: white;
+}

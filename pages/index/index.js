@@ -18,7 +18,7 @@ Page({
   bindViewTap2: function() {
     console.log('标语被点击'),
     wx.navigateTo({
-      url: '../about/about'
+      url: '../2TextAndButton/2TextAndButton'
     })
   },  
   onLoad: function () {
