@@ -33,6 +33,12 @@ Page({
       url: '../4Image/4Image'
       })
   },
+  bindViewTap5: function () {
+    console.log('标语被点击'),
+      wx.navigateTo({
+      url: '../5Input/5Input'
+      })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

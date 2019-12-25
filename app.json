@@ -5,7 +5,8 @@
     "pages/about/about",
     "pages/2TextAndButton/2TextAndButton",
     "pages/3View/3View",
-    "pages/4Image/4Image"
+    "pages/4Image/4Image",
+    "pages/5Input/5Input"
   ],
   "window": {
     "backgroundTextStyle": "dark",

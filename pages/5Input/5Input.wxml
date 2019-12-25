@@ -1,0 +1,24 @@
+<!--pages/5Input/5Input.wxml-->
+
+<!-- 1.input 的基础使用 -->
+<input></input>
+
+<!-- 2.value : input中的默认值 -->
+<input value='uhuhuh'></input>
+
+<!-- 3.type : 键盘类型 -->
+<!-- text number idcard digit -->
+<input type='number'></input>
+
+<!-- 4.password 暗文-->
+<input password='true'></input>
+
+<!-- 5.placeholder 占位文字 -->
+<input placeholder='占位文字'></input>
+
+<!-- 6.confirm-type 键盘确认键类型 -->
+<input confirm-type='send'></input>
+<input confirm-type='search'></input>
+
+<!-- 7.input 事件监听 -->
+<input bindfocus='handleInputFocus' bindblur='handleInputBlur' bindconfirm='handleInputConfirm' bindinput='handleInput'></input>
