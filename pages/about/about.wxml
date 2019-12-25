@@ -26,3 +26,6 @@
 
 <!-- 获取用户信息2 仅仅作为展示 -->
 <open-data type='userNickName'></open-data>
+
+<view wx:for="{{cookies}}">{{item.name}}</view>
+<view wx:for="student">{{item}}</view>

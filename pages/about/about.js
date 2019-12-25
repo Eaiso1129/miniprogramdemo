@@ -21,7 +21,8 @@ Page({
       { id: 102, name: 'harden', age: 25 },
       { id: 103, name: 'curry', age: 25 }
     ],
-    counter: 0
+    counter: 0,
+    cookies: []
   },
 
   /**
@@ -61,20 +62,32 @@ Page({
    */
   onLoad: function (options) {
     console.log('页面加载')
+    wx.request({
+      url: 'http://www.baidu.com',
+      success: (res) => {
+        console.log('收到回复')
+        console.log(res)
+        const data = res.cookies
+        this.setData({
+          cookies: data
+        })
+      }
+    })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log('面初次渲染完成')
+    console.log('页面初次渲染完成')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('页面显示')
   },
 
   /**
@@ -96,6 +109,13 @@ Page({
    */
   onPullDownRefresh: function () {
     console.log('用户下拉动作')
+  },
+
+  /**
+   * 监听页面滚动
+   */
+  onPageScroll(obj){
+    console.log(obj)
   },
 
   /**
