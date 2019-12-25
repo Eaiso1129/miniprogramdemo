@@ -1,6 +1,6 @@
 {
   "usingComponents": {},
-  "window": {
-    "navigationBarTitleText": "about"
-  }
+  "navigationBarTitleText": "About",
+  "navigationBarBackgroundColor": "#ff5777",
+  "enablePullDownRefresh": true
 }

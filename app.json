@@ -10,9 +10,11 @@
     "navigationBarTitleText": "Test",
     "navigationBarTextStyle": "black",
     "backgroundColor": "orange",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "tabBar": {
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/about/about",
