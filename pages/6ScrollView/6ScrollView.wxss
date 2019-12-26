@@ -1,0 +1,22 @@
+/* pages/6ScrollView/6ScrollView.wxss */
+.container1{
+  background: purple;
+  white-space: nowrap;
+}
+.item1{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: red;
+  display: inline-block;
+}
+.container2{
+  margin-top: 10px;
+  background: orange;
+  height: 300px;
+}
+.item2{
+  height: 100px;
+  margin: 10px;
+  background: blue;
+}

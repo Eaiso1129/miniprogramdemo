@@ -12,5 +12,6 @@
     <text bindtap='bindViewTap3' class="user-motto">view\n</text>
     <text bindtap='bindViewTap4' class="user-motto">image\n</text>
     <text bindtap='bindViewTap5' class="user-motto">input\n</text>
+    <text bindtap='bindViewTap6' class="user-motto" data-url='6ScrollView'>ScrollView\n</text>
   </view>
 </view>

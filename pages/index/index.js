@@ -39,6 +39,15 @@ Page({
       url: '../5Input/5Input'
       })
   },
+  bindViewTap6: function (e) {
+    console.log('标语被点击')
+    const tmp = e.currentTarget.dataset.url
+    const url = '../' + tmp + '/' + tmp
+    console.log(url)
+    wx.navigateTo({
+      url: url
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

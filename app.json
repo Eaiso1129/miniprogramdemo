@@ -6,7 +6,8 @@
     "pages/2TextAndButton/2TextAndButton",
     "pages/3View/3View",
     "pages/4Image/4Image",
-    "pages/5Input/5Input"
+    "pages/5Input/5Input",
+    "pages/6ScrollView/6ScrollView"
   ],
   "window": {
     "backgroundTextStyle": "dark",
