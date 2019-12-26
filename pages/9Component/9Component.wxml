@@ -1,0 +1,7 @@
+<!--pages/9Component/9Component.wxml-->
+
+<!-- 1。使用自定义组件 -->
+<!-- 使用前要在该页面对应json中注册 -->
+<my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn/>

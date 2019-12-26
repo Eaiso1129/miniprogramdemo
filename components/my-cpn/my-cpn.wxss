@@ -1,0 +1,10 @@
+/* components/my-cpn/my-cpn.wxss */
+
+.title{
+  font-size: 50rpx;
+  font-weight: 700;
+  color: orange;
+}
+.content{
+  font-size: 30rpx;
+}
