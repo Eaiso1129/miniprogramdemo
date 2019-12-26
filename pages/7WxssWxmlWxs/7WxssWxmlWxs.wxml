@@ -86,3 +86,27 @@ hidden 和 wx:if 用于显示时
   <button>+++</button>
   <view>---</view>
 </block>
+
+<!-- template 模板 -->
+<!-- 之前的小程序不支持自定义组件，所以用template进行代码复用 -->
+<!-- 模板中的内容 在没有被使用前是不会被渲染的 -->
+<view>---------------模板-------------</view>
+<!-- 引入wxml : import 不可以递归导入 , include 不可以导入模板 -->
+<import src="/wxml/template.wxml"/>
+
+<template is="template1" data="{{btnText: '按钮1',content: '文本1'}}"/>
+<template is="template1" data="{{btnText: '按钮2',content: '文本2'}}"/>
+<template is="template1" data="{{btnText: '按钮3',content: '文本3'}}"/>
+
+<!-- include 相当于将其他页面(除页面里的template,wxs外)复制到此处 -->
+<include src="/pages/about/about.wxml"/>
+
+<!-- 
+页面导入的两种方式：
+  import导入：
+    1.主要是导入template
+    2.不能进行递归导入
+  include导入:
+    1.将公共的wxml中的组件抽取到一个文件中
+    2.特点：不能导入template/wxs，可以进行递归导入
+-->
