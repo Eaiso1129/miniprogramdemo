@@ -1,0 +1,40 @@
+/* pages/7WxssWxmlWxs/7WxssWxmlWxs.wxss */
+
+/* 导入外部样式 */
+@import './style/content.wxss';
+@import './style/box.wxss';
+.box{
+  width: 100px;
+  height: 50px;
+  background: purple;
+  margin-top: 10px;
+  font-size: 25px;
+}
+.instance{
+  height: 50ps;
+  margin-top: 10px;
+  background: yellow;
+  font-size: 25px;
+}
+.instance2{
+  height: 50ps;
+  margin-top: 10px;
+  background: pink !important;
+  font-size: 25px;
+}
+/* .box1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+.box2{
+  width: 200rpx;
+  height: 200rpx;
+  background: green;
+} */
+/* .content1{
+  font-size: 30px;
+}
+.content2{
+  font-size: 60rpx;
+} */

@@ -7,4 +7,10 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+.instance{
+  height: 50ps;
+  margin-top: 10px;
+  background: orange;
+  font-size: 25px;
+}
