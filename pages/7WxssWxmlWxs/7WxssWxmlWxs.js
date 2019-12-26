@@ -11,7 +11,8 @@ Page({
     nowTime: new Date().toLocaleString(),
     isActive: false,
     isShow: true,
-    score: 90
+    score: 90,
+    price: 25.6666
   },
 
   handleInput(e){

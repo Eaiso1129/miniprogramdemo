@@ -1,0 +1,15 @@
+
+// 价格格式化
+function priceFormat(price, number){
+  var number = number || 2;
+  return price.toFixed(number);
+}
+
+function dateFormat(timeStamp, format) {
+  return '2019-12-26'
+}
+
+module.exports = {
+  priceFormat: priceFormat,
+  dateFormat: dateFormat,
+}

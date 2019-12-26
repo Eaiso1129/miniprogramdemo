@@ -110,3 +110,35 @@ hidden 和 wx:if 用于显示时
     1.将公共的wxml中的组件抽取到一个文件中
     2.特点：不能导入template/wxs，可以进行递归导入
 -->
+
+<!-- wxs -->
+<view>---------------wxs-------------</view>
+<!-- 1.wxs的定义方式 -->
+<!-- 1.1 直接在页面中定义 -->
+<!-- <wxs module="info">
+  var message = "Hello World";
+  var name = "eaiso";
+
+  var sum = function(num1,num2) {
+    return num1 + num2
+  }
+
+  module.exports = {
+    message: message
+    name: name
+    sum: sum
+  }
+</wxs> -->
+
+<!-- 1.2定义在单独的wxs文件中，再使用wxs标签进行导入 -->
+<!-- 只能使用相对路径 -->
+<wxs src="../../wxs/info.wxs" module="info" />
+
+<view>{{info.message}}</view>
+<view>{{info.sum(1,2)}}</view>
+
+<!-- 2.wxs的应用 -->
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{price}}</view>
+<view>{{format.priceFormat(price)}}</view>
+<view>{{format.dateFormat('date')}}</view>
