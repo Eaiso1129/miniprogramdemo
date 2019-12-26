@@ -8,7 +8,8 @@
     "pages/4Image/4Image",
     "pages/5Input/5Input",
     "pages/6ScrollView/6ScrollView",
-    "pages/7WxssWxmlWxs/7WxssWxmlWxs"
+    "pages/7WxssWxmlWxs/7WxssWxmlWxs",
+    "pages/8Event/8Event"
   ],
   "window": {
     "backgroundTextStyle": "dark",

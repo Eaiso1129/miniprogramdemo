@@ -14,5 +14,6 @@
     <text bindtap='bindViewTap5' class="user-motto">input\n</text>
     <text bindtap='bindViewTap6' class="user-motto" data-url='6ScrollView'>ScrollView\n</text>
     <text bindtap='bindViewTap6' class="user-motto" data-url='7WxssWxmlWxs'>Wxss and Wxml and Wxs\n</text>
+    <text bindtap='bindViewTap6' class="user-motto" data-url='8Event'>event\n</text>
   </view>
 </view>

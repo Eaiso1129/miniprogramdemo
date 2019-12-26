@@ -1,0 +1,42 @@
+<!--pages/8Event/8Event.wxml-->
+
+<!-- 常见事件 -->
+<view id="test" class='box' bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' bindlongpress='handleTouchPress'></view>
+
+<!-- 
+touches 和 changedTouches的区别 
+  1. 在touchend中不同
+  2. 多手指触摸时不同
+-->
+
+<!-- 
+target 和 currentTarget 的区别
+  target 记录产生事件的组件，currentTarget 记录触发事件的组件
+  例如当两个组件重叠时，点击重叠处时，处于下层的组件的事件中target存着上层组件，而currentTarget存着该组件本身
+ -->
+
+ <!-- 事件的传递参数 -->
+ <!-- 
+ data-{} : 指定触发事件时传递的参数
+ 在事件处理函数中通过 event.currentTarget.dataset.{} 可取到
+  -->
+<view class='box'>
+  <block>
+    <view class='item' wx:for="{{names}}" wx:key="{{names}}" data-name='{{item}}' bindtap='handleItemClick'>{{item}}</view>
+  </block>
+</view>
+
+<!-- 事件冒泡与事件捕获 -->
+<!-- 事件捕获从外到内 事件冒泡从内到外 -->
+<!-- bind: 一层层传递 -->
+<view class='outter' capture-bind:tap="handleCaptureView1" bindtap='handleBindView1'>
+  <view class='middle' capture-bind:tap="handleCaptureView2" bindtap='handleBindView2'>
+    <view class='inner' capture-bind:tap="handleCaptureView3" bindtap='handleBindView3'></view>
+  </view>
+</view>
+<!-- catch: 阻止事件传递 -->
+<view class='outter' capture-bind:tap="handleCaptureView1" bindtap='handleBindView1'>
+  <view class='middle' capture-bind:tap="handleCaptureView2" bindtap='handleBindView2'>
+    <view class='inner' capture-catch:tap="handleCaptureView3" catchtap='handleBindView3'></view>
+  </view>
+</view>
