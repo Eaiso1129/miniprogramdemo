@@ -38,3 +38,6 @@
 .content2{
   font-size: 60rpx;
 } */
+.active{
+  color: white;
+}

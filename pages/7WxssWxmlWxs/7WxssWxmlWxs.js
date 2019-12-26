@@ -5,14 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
+    firstName: 'James',
+    lastName: 'Harden',
+    age: 29,
+    nowTime: new Date().toLocaleString(),
+    isActive: false,
+    isShow: true,
+    score: 90
+  },
 
+  handleInput(e){
+    this.setData({
+      score: e.detail.value
+    })
+  },
+
+  handleSwitchColor() {
+    this.setData({
+      isActive: !this.isActive
+    })
+  },
+
+  handleSwitchShow(){
+    this.setData({
+      isShow: !this.data.isShow
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 实时刷新时间
+    setInterval(() => {
+      this.setData({
+        nowTime: new Date().toLocaleString()
+      })
+    }, 1000)
   },
 
   /**
@@ -40,7 +69,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**

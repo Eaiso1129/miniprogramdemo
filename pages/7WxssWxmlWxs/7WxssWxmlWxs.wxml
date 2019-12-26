@@ -1,6 +1,7 @@
 <!--pages/7WxssWxmlWxs/7WxssWxmlWxs.wxml-->
 
 <!-- wxss -->
+<view>---------------wxss-------------</view>
 <!-- 1.设置样式的三种方式 -->
 <!-- 1.1 行内（内联）样式 -->
 <view style='color: red; background: purple; font-size:30px;'>哈哈哈</view>
@@ -20,3 +21,68 @@
 <view class='box2'></view>
 <view class='content1'>哈哈哈</view>
 <view class='content2'>哈哈哈</view>
+
+<!-- 4.官方样式库 -->
+<!-- https://github.com/Tencent/weui-wxss/ -->
+
+
+<!-- wxml -->
+<view>---------------wxml-------------</view>
+<!-- 1.mustache语法 -->
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName + ' ' + lastName}}</view>
+<view>{{ age >= 18 ? '成年人':'未成年人'}}</view>
+<view>{{nowTime}}</view>
+
+<button size='mini' bindtap='handleSwitchColor'>切换颜色</button>
+<view class='box {{isActive ? "active":""}}'>哈哈哈</view>
+
+<view>---------------条件判断-------------</view>
+<!-- 2.逻辑判断 -->
+<!-- wx:if 的使用 -->
+<button size='mini' bindtap='handleSwitchShow'>切换显示</button>
+<view wx:if="{{isShow}}">哈哈哈</view>
+
+<!-- wx:elif/wx:else -->
+<input style='border: 1px solid green; width: 90rpx;' bindconfirm='handleInput'></input>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<!-- 
+hidden 和 wx:if 用于显示时
+区别：
+  hidden：将一个组件隐藏起来时，该组件依然存在，只是display：none
+  wx:if：隐藏时，该组件直接没被创建
+选择：
+  如果显示和隐藏频率较高时，选择hidden
+  显示和频率极低时，可以选择wx:if
+ -->
+<view hidden='{{!isShow}}'>hidden属性所控制的内容</view>
+<view wx:if='{{isShow}}'>wx:if所控制的内容</view>
+
+<view>---------------列表渲染-------------</view>
+<!-- 1.wx:for -->
+<!-- 1.1 遍历数组/字符串/数字 -->
+<view wx:for="{{['james','kobe','curry']}}">{{item}} {{index}}</view>
+<view wx:for="{{10}}">{{item}} {{index}}</view>
+<view wx:for="eaiso">{{item}} {{index}}</view>
+
+<!-- 2.item,index 换名 -->
+<view wx:for="eaiso" wx:for-item="char" wx:for-index="pos">{{char}} {{pos}}</view>
+
+<!-- for:key -->
+<view wx:for="eaiso" wx:key="eaiso" wx:for-item="char" wx:for-index="pos">{{char}} {{pos}}</view>
+
+<!-- block 标签 -->
+<!-- block不是一个组件，仅仅是一个包装元素，不会在页面做任何渲染，只接收控制属性，因此，但需要对其他标签进行包裹时，block性能个更好 -->
+<view wx:if="{{isShow}}">
+  <button>+++</button>
+  <view>---</view>
+</view>
+<block wx:if="{{isShow}}">
+  <button>+++</button>
+  <view>---</view>
+</block>
