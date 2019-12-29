@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "my-cpn":"/components/my-cpn/my-cpn"
+    "my-cpn":"/components/my-cpn/my-cpn",
+    "w-tab-control": "/components/w-tab-control/w-tab-control"
   }
 }

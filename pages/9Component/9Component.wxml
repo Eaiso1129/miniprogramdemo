@@ -29,3 +29,7 @@ styleIsolation的取值：
 <!-- 3.2 组件向页面传递事件 : 自定义事件 -->
 <view>当前counter： {{counter}}</view>
 <my-cpn title="组件通信" titleclass="blue" bind:increment="handleIncrement"/>
+
+
+<!-- 自定义组件练习 -->
+<w-tab-control titles="{{['衣服','裤子','鞋子','袜子']}}" bind:tab-item-click="handleTabClick"/>
