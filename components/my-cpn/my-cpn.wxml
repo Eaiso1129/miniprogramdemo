@@ -8,3 +8,5 @@
 <view class="content titleclass">{{content}}</view>
 
 <button size="mini" bindtap="handleIncrement">+</button>
+
+<view>组件内counter： {{counter}}</view>

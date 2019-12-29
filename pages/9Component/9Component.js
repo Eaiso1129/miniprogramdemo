@@ -8,6 +8,7 @@ Page({
     counter: 0
   },
 
+  // 处理组件事件
   handleIncrement(event){
     console.log(event.detail.name)
     this.setData({
@@ -15,8 +16,17 @@ Page({
     })
   },
 
+  // 处理组件事件
   handleTabClick(event){
     console.log("点击了：",event.detail.title)
+  },
+
+  handleIncreCpn(event){
+    const cpn = this.selectComponent('#my-cpn') // 可通过#id或.class获取组件对象
+    cpn.handlePageControl() // 调用组件内自定义方法
+    cpn.setData({ // 也可调用组件内置方法
+      counter: cpn.data.counter + 1
+    })
   },
 
   /**

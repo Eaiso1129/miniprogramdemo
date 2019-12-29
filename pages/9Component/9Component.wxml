@@ -31,5 +31,10 @@ styleIsolation的取值：
 <my-cpn title="组件通信" titleclass="blue" bind:increment="handleIncrement"/>
 
 
-<!-- 自定义组件练习 -->
+<!-- 4.自定义组件练习 -->
 <w-tab-control titles="{{['衣服','裤子','鞋子','袜子']}}" bind:tab-item-click="handleTabClick"/>
+
+
+<!-- 5.修改组件内数据 -->
+<button size="mini" bind:tap="handleIncreCpn">页面按钮 +</button>
+<my-cpn id="my-cpn" title="修改组件内数据" titleclass="green"/>

@@ -23,7 +23,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    counter: 0
   },
 
   /**
@@ -33,6 +33,11 @@ Component({
     handleIncrement() {
       // console.log('---------')
       this.triggerEvent('increment',{name: 'eaiso',age: 19},{})
+    },
+    handlePageControl(){
+      this.setData({
+        counter: this.data.counter + 1
+      })
     }
   }
 })
