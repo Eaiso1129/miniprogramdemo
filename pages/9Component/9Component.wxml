@@ -15,4 +15,17 @@
 option: {
   styleIsolation: "shared"
 }
+styleIsolation的取值：
+  - isolated ： 组件与页面样式相互独立
+  - apply-shared ： 页面样式会影响自定义组件，自定义组件样式不会影响页面
+  - shared： 相互影响
 -->
+
+<!-- 3.页面与组件之间的通信 -->
+<!-- 3.1 页面i向组件传递数据、样式 -->
+<my-cpn title="组件通信" content="假装有内容" titleclass="green"/>
+<my-cpn title="组件通信" titleclass="red"/>
+
+<!-- 3.2 组件向页面传递事件 : 自定义事件 -->
+<view>当前counter： {{counter}}</view>
+<my-cpn title="组件通信" titleclass="blue" bind:increment="handleIncrement"/>

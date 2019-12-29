@@ -1,5 +1,10 @@
 <!--components/my-cpn/my-cpn.wxml-->
 
-<view class='title'>标题</view>
-<view class='content'>自定义组件的内容</view>
+<view class='title titleclass'>标题</view>
+<view class='content titleclass'>自定义组件的内容</view>
 <cpn1/>
+
+<view class="title titleclass">{{title}}</view>
+<view class="content titleclass">{{content}}</view>
+
+<button size="mini" bindtap="handleIncrement">+</button>

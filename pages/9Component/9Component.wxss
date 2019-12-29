@@ -1,1 +1,10 @@
 /* pages/9Component/9Component.wxss */
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue{
+  color: blue;
+}
